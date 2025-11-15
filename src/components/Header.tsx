@@ -1,6 +1,7 @@
 import { ShoppingCart, Search, MapPin, Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -11,9 +12,22 @@ const Header = () => {
             <Button variant="ghost" size="icon" className="md:hidden">
               <Menu className="h-5 w-5" />
             </Button>
-            <h1 className="text-2xl font-bold bg-hero-gradient bg-clip-text text-transparent">
-              Live MART
-            </h1>
+            <Link to="/">
+              <h1 className="text-2xl font-bold bg-hero-gradient bg-clip-text text-transparent cursor-pointer hover:opacity-80 transition-opacity">
+                Live MART
+              </h1>
+            </Link>
+            <nav className="hidden md:flex gap-6">
+              <Link to="/shop" className="text-sm font-medium hover:text-primary transition-colors">
+                Shop
+              </Link>
+              <a href="#" className="text-sm font-medium hover:text-primary transition-colors">
+                About
+              </a>
+              <a href="#" className="text-sm font-medium hover:text-primary transition-colors">
+                Contact
+              </a>
+            </nav>
           </div>
 
           <div className="hidden md:flex flex-1 max-w-xl mx-8">

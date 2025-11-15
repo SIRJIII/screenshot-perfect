@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 import heroImage from "@/assets/hero-delivery.jpg";
 
 const Hero = () => {
@@ -24,10 +25,12 @@ const Hero = () => {
               Fresh products from your local stores, delivered to your door.
             </p>
             <div className="flex flex-wrap gap-4">
-              <Button size="lg" className="gap-2">
-                Start Shopping
-                <ArrowRight className="h-4 w-4" />
-              </Button>
+              <Link to="/shop">
+                <Button size="lg" className="gap-2">
+                  Start Shopping
+                  <ArrowRight className="h-4 w-4" />
+                </Button>
+              </Link>
               <Button size="lg" variant="outline">
                 Join as Retailer
               </Button>
